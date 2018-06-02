@@ -1,0 +1,26 @@
+var interface_w_f_device_information =
+[
+    [ "connecitonParamsForAllSupportSensorTypes", "interface_w_f_device_information.html#a59e5186c6837760c30d78dbcded933ce", null ],
+    [ "connectionParamsForSensorType:", "interface_w_f_device_information.html#a6c546f622f764a680f42d7a0077091e9", null ],
+    [ "isBatteryLevelSupported", "interface_w_f_device_information.html#a2f6d2a7d546069d06715ae25708a99db", null ],
+    [ "_lastUpdate", "interface_w_f_device_information.html#acfa5d1e33bf4dd0d36d90dd31db30f28", null ],
+    [ "dummyDevice", "interface_w_f_device_information.html#a8775e7352c01368845e24e941fee9caf", null ],
+    [ "lastlastUpdate", "interface_w_f_device_information.html#a58840b01473760b923cbf31d57932380", null ],
+    [ "updateDeltas", "interface_w_f_device_information.html#a29f0528a90c538d0365f48ea9b5d83aa", null ],
+    [ "batteryLevel", "interface_w_f_device_information.html#a1513af9133750009c73d56ff6117e8ab", null ],
+    [ "connected", "interface_w_f_device_information.html#ad29947f66a218d30f99dde140e3983c6", null ],
+    [ "deviceIdentifier", "interface_w_f_device_information.html#a184b74920cc7385e97056c48f0a324f2", null ],
+    [ "firmwareVersion", "interface_w_f_device_information.html#a1a0c2fa4589903d8213ceb9f5f872969", null ],
+    [ "hardwareVersion", "interface_w_f_device_information.html#a1883cffe8f68522e87ae09f94e1d6dee", null ],
+    [ "lastUpdate", "interface_w_f_device_information.html#a2fba86881b18cb6032e8300df34fa03f", null ],
+    [ "manufacturer", "interface_w_f_device_information.html#a98c2eddc02ab4fd3fbdc4f044f272dfd", null ],
+    [ "name", "interface_w_f_device_information.html#a3f2adc280ba0ad09e59c8fe20f6a7345", null ],
+    [ "networkType", "interface_w_f_device_information.html#a65d4b7a5e38faa543f21bc9b8ece0778", null ],
+    [ "productKey", "interface_w_f_device_information.html#a0684c2a284baf2744943a5ae7c776949", null ],
+    [ "rawName", "interface_w_f_device_information.html#a6acb016ba122ce60383df324499ea07b", null ],
+    [ "serialNumber", "interface_w_f_device_information.html#afd589d15b8bcd5ec57de4617add0d2f6", null ],
+    [ "signalStrength", "interface_w_f_device_information.html#adef56aadb29d4f1dc832b2d461f50895", null ],
+    [ "supportedSensorTypes", "interface_w_f_device_information.html#a3c42a2b47567c64d8f59effe3d010300", null ],
+    [ "UNAVAILABLE_ATTRIBUTE", "interface_w_f_device_information.html#a8983f6c3498c75e2fa79220dad7bf45b", null ],
+    [ "UUID", "interface_w_f_device_information.html#aca842e0706e724a0297cedc5eba62bc9", null ]
+];

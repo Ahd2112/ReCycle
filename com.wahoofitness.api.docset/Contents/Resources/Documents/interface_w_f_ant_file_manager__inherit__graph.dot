@@ -1,0 +1,33 @@
+digraph "WFAntFileManager"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="WFAntFileManager",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="WFAntFSDevice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_ant_f_s_device.html",tooltip="Represents the base class for ANT FS device implementations. "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="NSObject",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="WFBloodPressureManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_blood_pressure_manager.html",tooltip="Provides a means of communicating with, and transferring data from a Blood Pressure Profile ANT FS de..."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="WFFitDeviceManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_fit_device_manager.html",tooltip="Provides a means of communicating with, and transferring data from an ANT FS fitness device..."];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="WFGarminFitWatchManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_garmin_fit_watch_manager.html",tooltip="Provides a means of communicating with, and transferring data from an unspecified model Garmin Fitnes..."];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="WFGarminFR310Manager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_garmin_f_r310_manager.html",tooltip="Provides a means of communicating with, and transferring data from a Garmin Frontrunner 310 device..."];
+  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="WFGarminFR405Manager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_garmin_f_r405_manager.html",tooltip="Provides a means of communicating with, and transferring data from a Garmin Frontrunner 405 device..."];
+  Node5 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="WFGarminFR60Manager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_garmin_f_r60_manager.html",tooltip="Provides a means of communicating with, and transferring data from a Garmin Frontrunner 60 device..."];
+  Node5 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="WFGarminFR610Manager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_garmin_f_r610_manager.html",tooltip="Provides a means of communicating with, and transferring data from a Garmin Frontrunner 610 device..."];
+  Node5 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="WFGarminFR910XTManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_garmin_f_r910_x_t_manager.html",tooltip="Provides a means of communicating with, and transferring data from a Garmin Frontrunner 910XT device..."];
+  Node5 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 [label="WFGenericFitDeviceManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_generic_fit_device_manager.html",tooltip="Provides a means of communicating with, and transferring data from a generic ANT FS fitness device..."];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node13 [label="WFPedometerManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_pedometer_manager.html",tooltip="Provides a means of communicating with, and transferring data from a A&D Pedometer Profile ANT FS dev..."];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node14 [label="WFWeightScaleManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_weight_scale_manager.html",tooltip="Provides a means of communicating with, and transferring data from a Weight Scale Profile ANT FS devi..."];
+}

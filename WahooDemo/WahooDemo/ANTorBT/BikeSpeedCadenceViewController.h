@@ -34,10 +34,12 @@
 	UILabel* computedSpeedLabel;
     UILabel* distanceLabel;
     UILabel* temperatureLabel;
+    UILabel* distanceBiked;
     
 }
 
 
+@property (retain, nonatomic) IBOutlet UILabel *distanceBiked;
 @property (readonly, nonatomic) WFBikeSpeedCadenceConnection* bikeSpeedCadenceConnection;
 @property (retain, nonatomic) IBOutlet UILabel* lastCadenceTimeLabel;
 @property (retain, nonatomic) IBOutlet UILabel* totalCadenceRevolutionsLabel;
@@ -47,9 +49,17 @@
 @property (retain, nonatomic) IBOutlet UILabel* computedSpeedLabel;
 @property (retain, nonatomic) IBOutlet UILabel* distanceLabel;
 @property (retain, nonatomic) IBOutlet UILabel* temperatureLabel;
+
 @property (retain, nonatomic) IBOutlet UIImageView *startScreen;
-@property (retain,atomic) AVPlayer* thePlayer;
+@property (retain, nonatomic) IBOutlet UIImageView *challengeQ;
+@property (retain, nonatomic) IBOutlet UIImageView *challengeEnd;
+@property (retain, nonatomic) IBOutlet UIButton *yesButton;
+@property (retain, nonatomic) IBOutlet UIButton *noButton;
+
+@property (retain,atomic) AVPlayer* storyPlayer;
+@property (retain,atomic) AVPlayer* challengePlayer;
+@property (retain,atomic) AVPlayerViewController* storyPlayerController;
+@property (retain,atomic) AVPlayerViewController* challengePlayerController;
 
 - (IBAction)odometerClicked:(id)sender;
-- (AVPlayer*) playMovie;
 @end

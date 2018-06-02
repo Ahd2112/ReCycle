@@ -17,13 +17,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BikeSpeedCadenceViewController">
             <connections>
+                <outlet property="challengeEnd" destination="cdk-xI-8yP" id="cZx-pi-aKh"/>
+                <outlet property="challengeQ" destination="JHk-a2-dHe" id="TU9-5n-nwW"/>
                 <outlet property="computedCadenceLabel" destination="12" id="30"/>
                 <outlet property="computedSpeedLabel" destination="14" id="31"/>
                 <outlet property="connectButton" destination="76" id="81"/>
                 <outlet property="deviceIdLabel" destination="67" id="72"/>
+                <outlet property="distanceBiked" destination="JbY-rZ-DEh" id="kBC-ed-ILF"/>
                 <outlet property="distanceLabel" destination="84" id="86"/>
                 <outlet property="lastCadenceTimeLabel" destination="6" id="34"/>
                 <outlet property="lastSpeedTimeLabel" destination="24" id="35"/>
+                <outlet property="noButton" destination="KFK-4W-2P0" id="RQh-ZQ-lyT"/>
                 <outlet property="proximitySwitch" destination="91" id="93"/>
                 <outlet property="signalEfficiencyLabel" destination="69" id="71"/>
                 <outlet property="startScreen" destination="iX8-79-btT" id="zUL-z2-pUJ"/>
@@ -32,6 +36,7 @@
                 <outlet property="totalSpeedRevolutionsLabel" destination="10" id="37"/>
                 <outlet property="view" destination="1" id="3"/>
                 <outlet property="wildcardSwitch" destination="88" id="92"/>
+                <outlet property="yesButton" destination="Orc-Hx-uZ4" id="sJL-Vo-1Pn"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -43,6 +48,13 @@
                 <userLayoutGuide location="158" affinity="minX"/>
             </userGuides>
             <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="JbY-rZ-DEh">
+                    <rect key="frame" x="60" y="77" width="216" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="33"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="n/a" lineBreakMode="tailTruncation" minimumFontSize="10" id="6">
                     <rect key="frame" x="180" y="274" width="120" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -274,16 +286,33 @@
                         <action selector="odometerClicked:" destination="-1" eventType="touchUpInside" id="105"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gMc-cQ-HEz">
-                    <rect key="frame" x="137" y="381" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Recycle"/>
-                    <connections>
-                        <action selector="recycle:" destination="-1" eventType="touchUpInside" id="5Hq-GM-Xfh"/>
-                    </connections>
-                </button>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Pedal_to_Start.png" id="iX8-79-btT">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Orc-Hx-uZ4">
+                    <rect key="frame" x="120" y="111" width="70" height="42"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" red="1" green="0.24969744490000001" blue="0.1533946149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="yesAction:" destination="-1" eventType="touchUpInside" id="laJ-Rm-Spu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KFK-4W-2P0">
+                    <rect key="frame" x="231" y="111" width="86" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <action selector="noAction:" destination="-1" eventType="touchUpInside" id="agF-JZ-BWO"/>
+                    </connections>
+                </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="challenge_end.png" id="cdk-xI-8yP">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ChallengeQ.png" id="JHk-a2-dHe">
+                    <rect key="frame" x="0.0" y="-5" width="320" height="416"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
@@ -293,6 +322,8 @@
         </view>
     </objects>
     <resources>
+        <image name="ChallengeQ.png" width="2732" height="2052"/>
         <image name="Pedal_to_Start.png" width="2732" height="2052"/>
+        <image name="challenge_end.png" width="2732" height="2052"/>
     </resources>
 </document>

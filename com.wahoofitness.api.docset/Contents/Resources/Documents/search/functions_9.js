@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['image',['image',['../category_w_f_display_element_bitmap_07_w_f_u_i_kit_08.html#a77d741571d9c9387775b70ec689ba9e4',1,'WFDisplayElementBitmap(WFUIKit)::image()'],['../interface_w_f_display_element_bitmap.html#a77d741571d9c9387775b70ec689ba9e4',1,'WFDisplayElementBitmap::image()']]],
+  ['imagewithpage_3aforsensorsubtype_3ainverted_3a',['imageWithPage:forSensorSubType:inverted:',['../interface_w_f_display_page_view.html#a98e6455fe55001b22293410e8db66e1c',1,'WFDisplayPageView']]],
+  ['initforactivity_3awithsensorconnection_3a',['initForActivity:withSensorConnection:',['../interface_w_f_wahoo_motion_analysis_calibrator_running.html#a5606bee1cf9741232b502ef7bc2e8a24',1,'WFWahooMotionAnalysisCalibratorRunning']]],
+  ['initializeadvancedmode_3a',['initializeAdvancedMode:',['../category_w_f_hardware_connector_07_ant_mode_08.html#aa07a7c3291ecdc538c58e363f54f76d6',1,'WFHardwareConnector(AntMode)::initializeAdvancedMode:()'],['../interface_w_f_hardware_connector.html#aa07a7c3291ecdc538c58e363f54f76d6',1,'WFHardwareConnector::initializeAdvancedMode:()']]],
+  ['initwithbikepowerconnection_3a',['initWithBikePowerConnection:',['../interface_w_f_bike_trainer_spindown_calibrator.html#a3f59b7f3d2819dd183acf85c2e595da7',1,'WFBikeTrainerSpindownCalibrator']]],
+  ['initwithbuffer_3abufferlength_3a',['initWithBuffer:bufferLength:',['../interface_w_f_ant_f_s_directory.html#a671089729899d0ecd39651a7d12e45e4',1,'WFAntFSDirectory']]],
+  ['initwithdefaultsforexercise_3a',['initWithDefaultsForExercise:',['../interface_w_f_wahoo_motion_analysis_calibration_profile_x_counting.html#a2c278afd502076fad85bb527b543b9c0',1,'WFWahooMotionAnalysisCalibrationProfileXCounting']]],
+  ['initwithformat_3a',['initWithFormat:',['../interface_w_f_w_b_firmware_info.html#af25403b3241e33b753bdb8d4381c6c2d',1,'WFWBFirmwareInfo']]],
+  ['initwithrecord_3a',['initWithRecord:',['../interface_w_f_fit_mesg_device_settings.html#a18ef5afa7a9396a6de0c90ea071d3c24',1,'WFFitMesgDeviceSettings::initWithRecord:()'],['../interface_w_f_fit_mesg_file_id.html#aa06c58731fc2c125afb27d152b978a1e',1,'WFFitMesgFileId::initWithRecord:()'],['../interface_w_f_fit_mesg_h_r_m_profile.html#ace88f593ac842aaed55d606cbbe7820f',1,'WFFitMesgHRMProfile::initWithRecord:()'],['../interface_w_f_fit_mesg_user_profile.html#a270c2450467fb015fbdb71929d9284a7',1,'WFFitMesgUserProfile::initWithRecord:()'],['../interface_w_f_fit_mesg_workout.html#adffb3e72204d002c899380ac91c48dbc',1,'WFFitMesgWorkout::initWithRecord:()'],['../interface_w_f_fit_message_base.html#a43e578885be928ae38abf766c4e83dc2',1,'WFFitMessageBase::initWithRecord:()']]],
+  ['initwithsensorconnection_3a',['initWithSensorConnection:',['../interface_w_f_wahoo_motion_analysis_calibrator.html#ad25f2436293b6fff7aa531305c6c0504',1,'WFWahooMotionAnalysisCalibrator']]],
+  ['insertpage_3aatindex_3a',['insertPage:atIndex:',['../interface_w_f_display_configuration.html#a4206d7e0df731f741a198107de175bd9',1,'WFDisplayConfiguration']]],
+  ['instancefromdictionary_3a',['instanceFromDictionary:',['../interface_w_f_display_configuration.html#ac43cd6393a823fe5ff2c8f0c0f4573ec',1,'WFDisplayConfiguration']]],
+  ['instancewithcontentsoffile_3a',['instanceWithContentsOfFile:',['../interface_w_f_display_configuration.html#a7f5875d91ed67aa55c3f6a3eda6efee8',1,'WFDisplayConfiguration']]],
+  ['isbatterylevelsupported',['isBatteryLevelSupported',['../interface_w_f_device_information.html#a2f6d2a7d546069d06715ae25708a99db',1,'WFDeviceInformation']]],
+  ['iscoasting',['isCoasting',['../interface_w_f_bike_power_data.html#a47fc36dd7f39c37944c17fdd4746d7dd',1,'WFBikePowerData']]],
+  ['isinrange',['isInRange',['../interface_w_f_proximity_connection.html#ae81c6e1762a93ee08c4155be4dcaef7a',1,'WFProximityConnection']]],
+  ['isvalid',['isValid',['../interface_w_f_device_params.html#a4d364d5bd161e8484d98c8397defae59',1,'WFDeviceParams']]]
+];

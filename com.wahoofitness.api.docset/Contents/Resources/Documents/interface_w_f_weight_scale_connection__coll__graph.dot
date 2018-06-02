@@ -1,0 +1,23 @@
+digraph "WFWeightScaleConnection"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="WFWeightScaleConnection",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="_WFWeightScaleConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface___w_f_weight_scale_connection.html",tooltip="Internal-use base class for the WFWeightScaleConnection. "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="WFSensorConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_sensor_connection.html",tooltip="Represents the connection for an ANT sensor. "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="_WFSensorConnection",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" deviceInformation" ,fontname="FreeSans"];
+  Node5 [label="WFDeviceInformation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_device_information.html",tooltip="This class represents a collection of general information about a device. "];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="NSObject",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="\<WFWeightScaleDelegate\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$protocol_w_f_weight_scale_delegate-p.html",tooltip="Provides the interface for callback methods used by the WFWeightScaleConnection. "];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="\<_WFWeightScaleDelegate\>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _userRecordWaitingForId" ,fontname="FreeSans"];
+  Node9 [label="WFBTLEWeightScaleUser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_b_t_l_e_weight_scale_user.html",tooltip="Represents a User Profile for the Wahoo Fitness BTLE Weight Scale. "];
+  Node6 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

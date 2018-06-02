@@ -1,0 +1,31 @@
+digraph "WFBikePowerRawData"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="WFBikePowerRawData",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="WFSensorData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_sensor_data.html",tooltip="This is the abstract base class for all types of ANT sensor data. "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="NSObject",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" settings" ,fontname="FreeSans"];
+  Node4 [label="WFConnectorSettings",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_connector_settings.html",tooltip="Provides a means of persisting settings for the WFConnector. "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" commonData" ,fontname="FreeSans"];
+  Node5 [label="WFCommonData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_common_data.html",tooltip="Represents the metadata for the sensor, available from most ANT+ sensors. "];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" crankTorqueFreqData" ,fontname="FreeSans"];
+  Node6 [label="WFBikePowerCTFData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_bike_power_c_t_f_data.html",tooltip="Represents the data available from the Crank Torque Frequency type ANT+ Bike Power sensor..."];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" crankTorqueData" ,fontname="FreeSans"];
+  Node7 [label="WFBikePowerCrankTorqueData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_bike_power_crank_torque_data.html",tooltip="Represents the data available from the Crank Torque type ANT+ Bike Power sensor. "];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" powerOnlyData" ,fontname="FreeSans"];
+  Node8 [label="WFBikePowerPowerOnlyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_bike_power_power_only_data.html",tooltip="Represents the data available from the Power-Only type ANT+ Bike Power sensor. "];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wheelTorqueData" ,fontname="FreeSans"];
+  Node9 [label="WFBikePowerWheelTorqueData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_bike_power_wheel_torque_data.html",tooltip="Represents the data available from the Wheel Torque type ANT+ Bike Power sensor. "];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" calibrationData" ,fontname="FreeSans"];
+  Node10 [label="WFBikePowerCalibrationData_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_w_f_bike_power_calibration_data__t.html",tooltip="Describes calibration information for a Bike Power sensor. "];
+}

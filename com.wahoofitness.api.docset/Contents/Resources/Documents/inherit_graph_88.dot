@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="USHORT_UNION",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$union_u_s_h_o_r_t___u_n_i_o_n.html"];
+}

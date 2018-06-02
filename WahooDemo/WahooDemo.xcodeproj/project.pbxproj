@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		7F42740420AD29D00063B85F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F42740320AD29D00063B85F /* CoreMedia.framework */; };
 		7F42740620AD4CEF0063B85F /* Pedal_to_Start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F42740520AD4CEF0063B85F /* Pedal_to_Start@2x.png */; };
+		7F546CF620B269C100881060 /* challenge.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7F546CF520B269C000881060 /* challenge.mp4 */; };
+		7F546CF820B26A3300881060 /* challenge_end.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F546CF720B26A3300881060 /* challenge_end.png */; };
 		7F84D0E620AA9B97001BE8F4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F84D0E520AA9B97001BE8F4 /* AVFoundation.framework */; };
 		7F84D0E820AA9B9D001BE8F4 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F84D0E720AA9B9D001BE8F4 /* AVKit.framework */; };
 		7F84D0EC20AAAB37001BE8F4 /* DRAFT Eco-Cycle.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7F84D0EB20AAAB36001BE8F4 /* DRAFT Eco-Cycle.mp4 */; };
 		7F8DBF4A20AE442100DB0702 /* ChallengeQ@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F8DBF4920AE442100DB0702 /* ChallengeQ@2x.png */; };
+		7FBAAA8620BB16F100B47438 /* Eco-Cycle.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7FBAAA8520BB16F100B47438 /* Eco-Cycle.mp4 */; };
 		AB06267314EF4D6C002A192C /* BTBloodPressureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB06267114EF4D6C002A192C /* BTBloodPressureVC.m */; };
 		AB06267414EF4D6C002A192C /* BTBloodPressureVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB06267214EF4D6C002A192C /* BTBloodPressureVC.xib */; };
 		AB0A04CB140FF08100A8A19B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0A04CA140FF08100A8A19B /* UIKit.framework */; };
@@ -108,12 +111,13 @@
 /* Begin PBXFileReference section */
 		7F42740320AD29D00063B85F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		7F42740520AD4CEF0063B85F /* Pedal_to_Start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pedal_to_Start@2x.png"; sourceTree = "<group>"; };
+		7F546CF520B269C000881060 /* challenge.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = challenge.mp4; sourceTree = "<group>"; };
+		7F546CF720B26A3300881060 /* challenge_end.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = challenge_end.png; sourceTree = "<group>"; };
 		7F84D0E520AA9B97001BE8F4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7F84D0E720AA9B9D001BE8F4 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		7F84D0E920AAA076001BE8F4 /* DRAFT Eco-Cycle.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DRAFT Eco-Cycle.mp4"; sourceTree = "<group>"; };
-		7F84D0EA20AAA133001BE8F4 /* DRAFT Eco-Cycle.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DRAFT Eco-Cycle.mp4"; sourceTree = "<group>"; };
 		7F84D0EB20AAAB36001BE8F4 /* DRAFT Eco-Cycle.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DRAFT Eco-Cycle.mp4"; path = "../../../DRAFT Eco-Cycle.mp4"; sourceTree = "<group>"; };
 		7F8DBF4920AE442100DB0702 /* ChallengeQ@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ChallengeQ@2x.png"; sourceTree = "<group>"; };
+		7FBAAA8520BB16F100B47438 /* Eco-Cycle.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Eco-Cycle.mp4"; sourceTree = "<group>"; };
 		AB06267014EF4D6C002A192C /* BTBloodPressureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTBloodPressureVC.h; sourceTree = "<group>"; };
 		AB06267114EF4D6C002A192C /* BTBloodPressureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTBloodPressureVC.m; sourceTree = "<group>"; };
 		AB06267214EF4D6C002A192C /* BTBloodPressureVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BTBloodPressureVC.xib; path = ../en.lproj/BTBloodPressureVC.xib; sourceTree = "<group>"; };
@@ -317,6 +321,8 @@
 				ABF26995141035930013B3B1 /* WFSensorCommonViewController.h */,
 				ABF26996141035930013B3B1 /* WFSensorCommonViewController.m */,
 				AB0A04DC140FF08100A8A19B /* MainWindow.xib */,
+				7F546CF720B26A3300881060 /* challenge_end.png */,
+				7F546CF520B269C000881060 /* challenge.mp4 */,
 				AB0A04DF140FF08100A8A19B /* RootViewController.h */,
 				7F84D0EB20AAAB36001BE8F4 /* DRAFT Eco-Cycle.mp4 */,
 				AB0A04E0140FF08100A8A19B /* RootViewController.m */,
@@ -328,9 +334,9 @@
 				ABF2699E141036D50013B3B1 /* SensorManagerViewController.m */,
 				7F42740520AD4CEF0063B85F /* Pedal_to_Start@2x.png */,
 				7F8DBF4920AE442100DB0702 /* ChallengeQ@2x.png */,
+				7FBAAA8520BB16F100B47438 /* Eco-Cycle.mp4 */,
 				ABF2699B141036D50013B3B1 /* SensorManagerViewController.xib */,
 				ABE6A5BB1509E0D300A71559 /* DeviceDiscoveryVC.h */,
-				7F84D0EA20AAA133001BE8F4 /* DRAFT Eco-Cycle.mp4 */,
 				ABE6A5BC1509E0D300A71559 /* DeviceDiscoveryVC.m */,
 				AB0A04DA140FF08100A8A19B /* DeviceDiscoveryVC.xib */,
 				AB0A04D1140FF08100A8A19B /* Supporting Files */,
@@ -448,7 +454,6 @@
 				AB7BB73814EC467A00BB3B91 /* BikeSpeedCadenceViewController.h */,
 				AB7BB73914EC467A00BB3B91 /* BikeSpeedCadenceViewController.m */,
 				ABF269B614104FCA0013B3B1 /* BikeSpeedCadenceViewController.xib */,
-				7F84D0E920AAA076001BE8F4 /* DRAFT Eco-Cycle.mp4 */,
 				ABC0402A15252CAD004E66B8 /* OdometerHistoryVC.h */,
 				ABC0402B15252CAD004E66B8 /* OdometerHistoryVC.m */,
 				ABC0402C15252CAD004E66B8 /* OdometerHistoryVC.xib */,
@@ -546,6 +551,7 @@
 				7F42740620AD4CEF0063B85F /* Pedal_to_Start@2x.png in Resources */,
 				AB0A04D5140FF08100A8A19B /* InfoPlist.strings in Resources */,
 				7F8DBF4A20AE442100DB0702 /* ChallengeQ@2x.png in Resources */,
+				7F546CF620B269C100881060 /* challenge.mp4 in Resources */,
 				AB0A04DE140FF08100A8A19B /* MainWindow.xib in Resources */,
 				AB0A04E4140FF08100A8A19B /* RootViewController.xib in Resources */,
 				AB0A04F6140FF5BE00A8A19B /* Default.png in Resources */,
@@ -571,6 +577,7 @@
 				ABA2069614EB045D0072B89C /* BloodPressureViewController.xib in Resources */,
 				ABA2069814EB045D0072B89C /* BPHistoryViewController.xib in Resources */,
 				ABA2069B14EB045D0072B89C /* WeightHistoryViewController.xib in Resources */,
+				7FBAAA8620BB16F100B47438 /* Eco-Cycle.mp4 in Resources */,
 				ABA206A214EB051C0072B89C /* ANTFSSelectVC.xib in Resources */,
 				ABA206AA14EB0B7E0072B89C /* blackBox.png in Resources */,
 				ABA206AB14EB0B7E0072B89C /* greenButton.png in Resources */,
@@ -583,6 +590,7 @@
 				AB7BB73414EC413600BB3B91 /* ANTBTOverviewVC.xib in Resources */,
 				AB06267414EF4D6C002A192C /* BTBloodPressureVC.xib in Resources */,
 				AB2F915714F5FB8100F89B4A /* BTGlucoseVC.xib in Resources */,
+				7F546CF820B26A3300881060 /* challenge_end.png in Resources */,
 				AB2F916114F61E1800F89B4A /* BTGlucoseDetailVC.xib in Resources */,
 				AB9283C614F732B40093D8BD /* GlucoseVC.xib in Resources */,
 				AB2114FE14FD3C8500B48141 /* BTDeviceInfoVC.xib in Resources */,

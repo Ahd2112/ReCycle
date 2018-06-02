@@ -1,0 +1,47 @@
+digraph "WFSensorConnection"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="WFSensorConnection",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="_WFSensorConnection",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="_WFBikePowerConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface___w_f_bike_power_connection.html"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="WFBikePowerConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_bike_power_connection.html",tooltip="Represents a connection to an ANT+ Bike Power sensor. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="_WFWeightScaleConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface___w_f_weight_scale_connection.html",tooltip="Internal-use base class for the WFWeightScaleConnection. "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="WFWeightScaleConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_weight_scale_connection.html",tooltip="Represents a connection to an ANT+ or BTLE Weight Scale sensor. "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="WFBikeCadenceConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_bike_cadence_connection.html",tooltip="Represents a connection to an ANT+ Bike Cadence sensor. "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="WFBikeSpeedCadenceConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_bike_speed_cadence_connection.html",tooltip="Represents a connection to an ANT+ combined Bike Speed and Cadence sensor. "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="WFBikeSpeedConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_bike_speed_connection.html",tooltip="Represents a connection to an ANT+ Bike Speed sensor. "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="WFBloodPressureConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_blood_pressure_connection.html",tooltip="Represents a connection to a BTLE Blood Pressure sensor. "];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="WFBTLEGlucoseConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_b_t_l_e_glucose_connection.html",tooltip="Represents a connection to a BTLE Glucose Monitor sensor. "];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 [label="WFCalorimeterConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_calorimeter_connection.html",tooltip="Represents a connection to an ANT+ Calorimeter sensor. "];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node13 [label="WFFitnessEquipmentConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_fitness_equipment_connection.html",tooltip="Represents a connection to an ANT+ Fitness Equipment sensor. "];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node14 [label="WFFootpodConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_footpod_connection.html",tooltip="Represents a connection to an ANT+ Stride sensor. "];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node15 [label="WFGeoCacheConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_geo_cache_connection.html",tooltip="Represents a connection to an ANT+ GeoCache sensor. "];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node16 [label="WFGlucoseConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_glucose_connection.html",tooltip="Represents a connection to an ANT+ Glucose Monitor sensor. "];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node17 [label="WFHealthThermometerConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_health_thermometer_connection.html",tooltip="Represents a connection to a BTLE Health Thermometer sensor. "];
+  Node1 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node18 [label="WFHeartrateConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_heartrate_connection.html",tooltip="Represents a connection to an ANT+ Heart Rate Monitor sensor. "];
+  Node1 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node19 [label="WFMultiSportConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_multi_sport_connection.html",tooltip="Represents an ANT+ Multi-Sport Speed and Distance connection. "];
+  Node1 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node20 [label="WFProximityConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_proximity_connection.html",tooltip="Represents a connection to a BTLE Proximity sensor. "];
+  Node1 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node21 [label="WFWahooRawSensorConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_wahoo_raw_sensor_connection.html",tooltip="Represents a connection to a Wahoo Raw Sensor Service (implemented by a BLE device) ..."];
+}

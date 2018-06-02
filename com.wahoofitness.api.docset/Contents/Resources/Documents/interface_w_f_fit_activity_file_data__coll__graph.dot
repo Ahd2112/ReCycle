@@ -1,0 +1,20 @@
+digraph "WFFitActivityFileData"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="WFFitActivityFileData",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="NSObject",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" deviceInfo" ,fontname="FreeSans"];
+  Node3 [label="WFFitMessageDeviceInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_fit_message_device_info.html",tooltip="Represents a device info record from a fitness device FIT file. "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="WFFitMessageBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_fit_message_base.html",tooltip="Represents a single record in a FIT file system. "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pstDeviceInfo" ,fontname="FreeSans"];
+  Node5 [label="FIT_DEVICE_INFO_MESG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_f_i_t___d_e_v_i_c_e___i_n_f_o___m_e_s_g.html"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fileId" ,fontname="FreeSans"];
+  Node6 [label="WFFitMesgFileId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_fit_mesg_file_id.html",tooltip="Represents the File ID record from a FIT file. "];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pstFileId" ,fontname="FreeSans"];
+  Node7 [label="FIT_FILE_ID_MESG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_f_i_t___f_i_l_e___i_d___m_e_s_g.html"];
+}

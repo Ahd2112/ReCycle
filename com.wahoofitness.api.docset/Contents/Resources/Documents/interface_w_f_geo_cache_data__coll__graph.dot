@@ -1,0 +1,16 @@
+digraph "WFGeoCacheData"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="WFGeoCacheData",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="WFSensorData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_sensor_data.html",tooltip="This is the abstract base class for all types of ANT sensor data. "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="NSObject",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" settings" ,fontname="FreeSans"];
+  Node4 [label="WFConnectorSettings",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_connector_settings.html",tooltip="Provides a means of persisting settings for the WFConnector. "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" commonData" ,fontname="FreeSans"];
+  Node5 [label="WFCommonData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_common_data.html",tooltip="Represents the metadata for the sensor, available from most ANT+ sensors. "];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

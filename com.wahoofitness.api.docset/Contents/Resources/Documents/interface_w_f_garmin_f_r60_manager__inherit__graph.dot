@@ -1,0 +1,14 @@
+digraph "WFGarminFR60Manager"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="WFGarminFR60Manager",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="WFFitDeviceManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_fit_device_manager.html",tooltip="Provides a means of communicating with, and transferring data from an ANT FS fitness device..."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="WFAntFileManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_ant_file_manager.html",tooltip="Provides a means of communicating with, and transferring data from an ANT FS device. "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="WFAntFSDevice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_ant_f_s_device.html",tooltip="Represents the base class for ANT FS device implementations. "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="NSObject",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

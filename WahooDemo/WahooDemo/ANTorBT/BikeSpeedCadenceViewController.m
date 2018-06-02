@@ -32,10 +32,13 @@
 @synthesize distanceLabel;
 @synthesize temperatureLabel;
 @synthesize startScreen;
+@synthesize challengeQ;
+@synthesize distanceBiked;
 static NSUInteger timeNotActive = 0;
-static bool isPlaying = false;
-static bool inChallange = false;
-static bool atMovieEnd = false;
+static bool isPlaying = false; //if the player is playing
+static bool inChallenge = false;
+static bool sleepNow = false;
+static bool addSubviews = true;
 #pragma mark -
 #pragma mark UIViewController Implementation
 
@@ -52,6 +55,12 @@ static bool atMovieEnd = false;
     [temperatureLabel release];
     
     [startScreen release];
+    [challengeQ release];
+    [_yesButton release];
+    [_noButton release];
+    [distanceBiked release];
+    [distanceBiked release];
+    [_challengeEnd release];
     [super dealloc];
 }
 
@@ -72,7 +81,6 @@ static bool atMovieEnd = false;
         sensorType = WF_SENSORTYPE_BIKE_SPEED_CADENCE;
         applicableNetworks = WF_NETWORKTYPE_ANTPLUS | WF_NETWORKTYPE_BTLE;
     }
-    
     return self;
 }
 
@@ -82,6 +90,8 @@ static bool atMovieEnd = false;
     [super viewDidLoad];
     
     self.navigationItem.title = @"Bike Speed & Cadence";
+    [self initStoryPlayer];
+    [self initChallengePlayer];
 }
 
 //--------------------------------------------------------------------------------
@@ -118,11 +128,11 @@ static bool atMovieEnd = false;
 //--------------------------------------------------------------------------------
 - (void)cscConnection:(WFBikeSpeedCadenceConnection*)cscConn didResetOdometer:(BOOL)bSuccess
 {
-    NSString* msg = [NSString stringWithFormat:@"Received Odometer Reset response.\n\nStatus: %@", bSuccess?@"SUCCESS":@"FAILED"];
-    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"BTLE CSC" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
-    [alert release];
-    alert = nil;
+    //NSString* msg = [NSString stringWithFormat:@"Received Odometer Reset response.\n\nStatus: %@", bSuccess?@"SUCCESS":@"FAILED"];
+    //UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"BTLE CSC" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    //[alert show];
+    //[alert release];
+    //alert = nil;
 }
 
 //--------------------------------------------------------------------------------
@@ -186,9 +196,19 @@ static bool atMovieEnd = false;
 	WFBikeSpeedCadenceData* bscData = [self.bikeSpeedCadenceConnection getBikeSpeedCadenceData];
 	if ( bscData != nil )
 	{
+        if(addSubviews){
+            _challengePlayerController.view.frame = self.view.bounds;
+            [[self view] addSubview:_challengePlayerController.view];
+            _storyPlayerController.view.frame = self.view.bounds;
+             [[self view] addSubview:_storyPlayerController.view];
+            addSubviews= false;
+            [self.view bringSubviewToFront:startScreen];
+        }
         [[self navigationController]setNavigationBarHidden:true];
         startScreen.hidden = false;
-        
+        [startScreen setFrame:self.view.bounds];
+        [challengeQ setFrame:self.view.bounds];
+        [_challengeEnd setFrame:self.view.bounds];
         // update basic data.
 		lastCadenceTimeLabel.text = [NSString stringWithFormat:@"%3.3f", bscData.accumCadenceTime];
 		totalCadenceRevolutionsLabel.text = [NSString stringWithFormat:@"%ld", bscData.accumCrankRevolutions];
@@ -199,28 +219,79 @@ static bool atMovieEnd = false;
         computedCadenceLabel.text = [bscData formattedCadence:TRUE];
         distanceLabel.text = [bscData formattedDistance:TRUE];
         //the movie is currently not running
-        if ([computedCadenceLabel.text isEqualToString:@"--"]){
+        if(sleepNow){
+            [self.view bringSubviewToFront:startScreen];
+            [NSThread sleepForTimeInterval:10.0];
+            _challengeEnd.hidden = true;
+            startScreen.hidden = false;
+            
+            sleepNow = false;
+        }
+        if ([computedCadenceLabel.text isEqualToString:@"--"] &&!inChallenge){
             timeNotActive++;
-            NSLog([NSString stringWithFormat:@"%lu",(unsigned long)timeNotActive]);
+            //NSLog([NSString stringWithFormat:@"%lu",(unsigned long)timeNotActive]);
+            //NSLog(computedCadenceLabel.text);
         }
         //if started and got off reset to startcreen
-        if([computedCadenceLabel.text isEqualToString:@"--"] && timeNotActive>10){
+        if([computedCadenceLabel.text isEqualToString:@"--"] && timeNotActive>10 && !inChallenge){
             isPlaying = false;
             startScreen.hidden = false;
-            [[self view] addSubview:startScreen];
-            [self.thePlayer pause];
-            [self.thePlayer release];
+            [self.view bringSubviewToFront:startScreen];
+            [_storyPlayer seekToTime:kCMTimeZero];
+            [_storyPlayer pause];
             //go back to restart screen
         }
         //if not running play movie and bike not moving play movie
-        if (![computedCadenceLabel.text isEqualToString:@"--"] && !isPlaying){
+        else if (![computedCadenceLabel.text isEqualToString:@"--"] && !isPlaying &&!inChallenge){
             timeNotActive = 0;
-            self.thePlayer=[self playMovie];
+            [self.view bringSubviewToFront:_storyPlayerController.view];
+            
+            isPlaying = true;
+           
+            [_storyPlayer play];
         }
-        if(isPlaying && _thePlayer!=nil){
-            float time = CMTimeGetSeconds(self.thePlayer.currentTime);
-            NSLog([NSString stringWithFormat:@"%f", time]);
+        float storyTime;
+        float challengeTime;
+        if(isPlaying){
+            storyTime = CMTimeGetSeconds(self.storyPlayer.currentTime);
+            challengeTime = CMTimeGetSeconds(self.challengePlayer.currentTime);
+            //NSLog([NSString stringWithFormat:@"%f", time]);
         }
+        //if someone completed the video
+        if ((storyTime>CMTimeGetSeconds(_storyPlayer.currentItem.asset.duration)-1.0 ||storyTime>CMTimeGetSeconds(_storyPlayer.currentItem.asset.duration)+1.0) && !inChallenge){
+            isPlaying = false;
+            inChallenge = true;
+            _noButton.hidden = false;
+            _yesButton.hidden = false;
+            [_storyPlayer pause];
+            [_storyPlayer seekToTime:kCMTimeZero];
+            [self.view bringSubviewToFront:_noButton];
+            [self.view bringSubviewToFront:_yesButton];
+            challengeQ.hidden = false;
+            [self.view bringSubviewToFront:challengeQ];
+        }
+        //challenge ends
+        else if ((challengeTime>CMTimeGetSeconds(_challengePlayer.currentItem.asset.duration)-1.0 ||challengeTime>CMTimeGetSeconds(_challengePlayer.currentItem.asset.duration)+1.0) && isPlaying && inChallenge){
+            inChallenge = false;
+            isPlaying = false;
+            timeNotActive = 0;
+            _challengeEnd.hidden = false;
+            [_challengePlayer pause];
+            [_challengePlayer seekToTime:kCMTimeZero];
+            CGPoint center = self.view.center;
+            center.y -= 40;
+            distanceBiked.center = center;
+            [self.view bringSubviewToFront:_challengeEnd];
+            [distanceBiked setFont:[UIFont fontWithName:@"HelveticaNeue" size:33]];
+            NSString* revs =[NSString stringWithFormat:@"%lu", bscData.accumCrankRevolutions];
+            NSString *fullText = [NSString stringWithFormat:@"You Biked \n %@ miles!",revs];
+            distanceBiked.text = fullText;
+            distanceBiked.hidden = false;
+            [self.view bringSubviewToFront:distanceBiked];
+            //NSLog(@"%lu", bscData.accumCrankRevolutions);
+            sleepNow = true;
+        }
+        NSLog(@"%lu", bscData.accumCrankRevolutions);
         // get BTLE specific data.
         if ( [bscData isKindOfClass:[WFBTLEBikeSpeedCadenceData class]] )
         {
@@ -334,13 +405,32 @@ static bool atMovieEnd = false;
     }
     
 }
-- (AVPlayer*)playMovie {
+- (void)initStoryPlayer{
     NSString *path = [[NSBundle mainBundle] resourcePath];
     NSFileManager *fm = [NSFileManager defaultManager];
     NSError *error = nil;
-    NSArray *dirandfilenames = [fm contentsOfDirectoryAtPath:path error:error];
-    NSLog(@"%@",dirandfilenames[3]);
-    NSString *path1 = dirandfilenames[3];
+    NSArray *dirandfilenames = [fm contentsOfDirectoryAtPath:path error:&error];
+    //NSLog(@"%@",dirandfilenames[11]);
+    NSString *path1 = dirandfilenames[11];
+    
+    NSArray *components = [NSArray arrayWithObjects:path,path1,nil];
+    NSString *fullpath = [NSString pathWithComponents:components];
+    NSURL *url = [NSURL fileURLWithPath:fullpath];
+    
+    AVPlayer *player = [AVPlayer playerWithURL:url];
+    AVPlayerViewController * controller = [[AVPlayerViewController alloc]init];
+    controller.player = player;
+    //controller.view.frame = self.view.bounds;
+    _storyPlayer = player;
+    _storyPlayerController = controller;
+}
+- (void) initChallengePlayer{
+    NSString *path = [[NSBundle mainBundle] resourcePath];
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSError *error = nil;
+    NSArray *dirandfilenames = [fm contentsOfDirectoryAtPath:path error:&error];
+    NSLog(@"%@",dirandfilenames);
+    NSString *path1 = dirandfilenames[15];
     
     NSArray *components = [NSArray arrayWithObjects:path,path1,nil];
     NSString *fullpath = [NSString pathWithComponents:components];
@@ -349,41 +439,29 @@ static bool atMovieEnd = false;
     AVPlayerViewController * controller = [[AVPlayerViewController alloc]init];
     
     controller.player = player;
-    controller.view.frame = self.view.bounds;
-    
-    [[self view] addSubview:controller.view];
-    if (![computedCadenceLabel.text isEqualToString:@"--"] && !isPlaying)
-    {
-        isPlaying = true;
-        [player play];
-    }
-    return player;
-    
+    //controller.view.frame = self.view.bounds;
+    //TODO possible memory leak
+    //controller.showsPlaybackControls = false;
+
+    _challengePlayer = player;
+    _challengePlayerController = controller;
 }
 
-- (IBAction)recycle:(id)sender {
-    
-    NSString *path = [[NSBundle mainBundle] resourcePath];
-    NSFileManager *fm = [NSFileManager defaultManager];
-    NSError *error = nil;
-    NSArray *dirandfilenames = [fm contentsOfDirectoryAtPath:path error:error];
-    NSLog(@"%@",dirandfilenames[3]);
-    NSString *path1 = dirandfilenames[3];
-    
-    NSArray *components = [NSArray arrayWithObjects:path,path1,nil];
-    NSString *fullpath = [NSString pathWithComponents:components];
-    NSURL *url = [NSURL fileURLWithPath:fullpath];
-    AVPlayer *player = [AVPlayer playerWithURL:url];
-    AVPlayerViewController * controller = [[AVPlayerViewController alloc]init];
-    
-    controller.player = player;
-    controller.view.frame = self.view.bounds;
-    
-    [[self view] addSubview:controller.view];
-    startScreen.hidden = true;
-    [player play];
-    
-     
+- (IBAction)yesAction:(id)sender {
+    isPlaying = true;
+    [self.bikeSpeedCadenceConnection requestOdometerReset:0.0];
+    //controller.showsPlaybackControls = false;
+    [self.view bringSubviewToFront:_challengePlayerController.view];
+    [_challengePlayer play];
 }
+- (IBAction)noAction:(id)sender {
+    inChallenge = false;
+    startScreen.hidden=false;
+    isPlaying = false;
+    [self.view bringSubviewToFront:startScreen];
+    sleepNow = true;
+}
+
+
 
 @end

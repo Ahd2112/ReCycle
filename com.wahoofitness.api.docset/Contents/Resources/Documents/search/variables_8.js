@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['hardware_5fversion',['hardware_version',['../struct_f_i_t___f_i_l_e___c_r_e_a_t_o_r___m_e_s_g.html#a9bbbc6e224b03c34494d1320b4a24bae',1,'FIT_FILE_CREATOR_MESG::hardware_version()'],['../struct_f_i_t___d_e_v_i_c_e___i_n_f_o___m_e_s_g.html#aea21ceb12c3863ea5661b16d2145626f',1,'FIT_DEVICE_INFO_MESG::hardware_version()']]],
+  ['hba1c',['hbA1c',['../struct_w_f_b_t_l_e_glucose_measurement_context__t.html#a34246950605caba094cc388e1bd333c6',1,'WFBTLEGlucoseMeasurementContext_t']]],
+  ['header_5fsize',['header_size',['../struct_f_i_t___f_i_l_e___h_d_r.html#a39678a08f6eeda450ed1c52e5286db10',1,'FIT_FILE_HDR']]],
+  ['healthinfo',['healthInfo',['../struct_w_f_b_t_l_e_glucose_measurement_context__t.html#a02efe60d59a816532eb0670408c4e344',1,'WFBTLEGlucoseMeasurementContext_t']]],
+  ['heart_5frate',['heart_rate',['../struct_f_i_t___r_e_c_o_r_d___m_e_s_g.html#aa8fcd84194ad71ba8b29194a7699595c',1,'FIT_RECORD_MESG::heart_rate()'],['../struct_f_i_t___b_l_o_o_d___p_r_e_s_s_u_r_e___m_e_s_g.html#aac9e2e2b95aace77e724cedacdc07db6',1,'FIT_BLOOD_PRESSURE_MESG::heart_rate()']]],
+  ['heart_5frate_5ftype',['heart_rate_type',['../struct_f_i_t___b_l_o_o_d___p_r_e_s_s_u_r_e___m_e_s_g.html#aa724493261decfbd31308fe9eb5ff9d6',1,'FIT_BLOOD_PRESSURE_MESG']]],
+  ['heartrateconnectiontickrxdelegate',['heartrateConnectionTICKRXDelegate',['../interface_w_f_heartrate_connection.html#aa073c0dbeab30b1e6905501bca7b45ce',1,'WFHeartrateConnection']]],
+  ['height',['height',['../struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#aacfa0e62392a67fef75d684b1d5abda1',1,'FIT_USER_PROFILE_MESG::height()'],['../struct_w_f_weight_scale_user_profile__t.html#aea7a200b6720c470d1eadc12f341c454',1,'WFWeightScaleUserProfile_t::height()'],['../struct_w_f_fitness_equipment_settings__t.html#a2425758372385e122957b1d5ad9217fd',1,'WFFitnessEquipmentSettings_t::height()']]],
+  ['high_5fbpm',['high_bpm',['../struct_f_i_t___h_r___z_o_n_e___m_e_s_g.html#a84297a990a1f2a6490504e5aecf02acc',1,'FIT_HR_ZONE_MESG::high_bpm()'],['../struct_f_i_t___m_e_t___z_o_n_e___m_e_s_g.html#a87ed323e050bb3048c96311927fec8e6',1,'FIT_MET_ZONE_MESG::high_bpm()']]],
+  ['high_5fvalue',['high_value',['../struct_f_i_t___p_o_w_e_r___z_o_n_e___m_e_s_g.html#ada3b8b101d1af5295129f2d6d17a6843',1,'FIT_POWER_ZONE_MESG']]],
+  ['hr_5fcalc_5ftype',['hr_calc_type',['../struct_f_i_t___z_o_n_e_s___t_a_r_g_e_t___m_e_s_g.html#a1c25e4203c2fb35211f3bc32d38ca3fe',1,'FIT_ZONES_TARGET_MESG']]],
+  ['hr_5fsetting',['hr_setting',['../struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#a60f43658e9da2b1c428f98f8e89a04e1',1,'FIT_USER_PROFILE_MESG']]],
+  ['hrm_5fant_5fid',['hrm_ant_id',['../struct_f_i_t___h_r_m___p_r_o_f_i_l_e___m_e_s_g.html#aaddc4d20fb87afb315f30749c844724d',1,'FIT_HRM_PROFILE_MESG']]],
+  ['hrm_5fant_5fid_5ftrans_5ftype',['hrm_ant_id_trans_type',['../struct_f_i_t___h_r_m___p_r_o_f_i_l_e___m_e_s_g.html#a1e1556bfb77b90aedd5ddb5eb139b056',1,'FIT_HRM_PROFILE_MESG']]],
+  ['hrmdeviceid',['hrmDeviceId',['../struct_w_f_fitness_equipment_settings__t.html#a35825ae55a007c865e44f206dad47826',1,'WFFitnessEquipmentSettings_t']]],
+  ['hrmenabled',['hrmEnabled',['../struct_w_f_fitness_equipment_settings__t.html#a4caf300ec49839147520dcfc0a03606f',1,'WFFitnessEquipmentSettings_t']]]
+];

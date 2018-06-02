@@ -1,0 +1,14 @@
+digraph "WFMultiSportConnection"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="WFMultiSportConnection",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="WFSensorConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_sensor_connection.html",tooltip="Represents the connection for an ANT sensor. "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="_WFSensorConnection",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" deviceInformation" ,fontname="FreeSans"];
+  Node4 [label="WFDeviceInformation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_device_information.html",tooltip="This class represents a collection of general information about a device. "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="NSObject",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

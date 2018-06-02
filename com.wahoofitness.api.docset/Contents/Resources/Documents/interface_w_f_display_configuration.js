@@ -1,0 +1,28 @@
+var interface_w_f_display_configuration =
+[
+    [ "addPage:", "interface_w_f_display_configuration.html#a9d7b9d1792f8ec2b416072ebfd530027", null ],
+    [ "dictionaryRepresentation", "interface_w_f_display_configuration.html#aafbc661826f8ab55e9e4bca10020956c", null ],
+    [ "elementsForKey:", "interface_w_f_display_configuration.html#a71a88bc31882f95d8fce8a4d79626c40", null ],
+    [ "functionForButtonGestureNamed:", "interface_w_f_display_configuration.html#a437e169b53e65d7df6bc47389d3a05a7", null ],
+    [ "insertPage:atIndex:", "interface_w_f_display_configuration.html#a4206d7e0df731f741a198107de175bd9", null ],
+    [ "pageForKey:", "interface_w_f_display_configuration.html#aa5b387e6068b40d803ec32c6a68b3b62", null ],
+    [ "removeAllPages", "interface_w_f_display_configuration.html#ad18c80e1b1d7f431b9bc820f798a1e19", null ],
+    [ "removePage:", "interface_w_f_display_configuration.html#aab22ec26b33d07b82c8dbd74caab254a", null ],
+    [ "removePageAtIndex:", "interface_w_f_display_configuration.html#ad67094c322449c3ae92b464e915e1601", null ],
+    [ "setFunction:forButtonGestureNamed:", "interface_w_f_display_configuration.html#afba06e2844127797195b8abb8f93c6aa", null ],
+    [ "writeToFile:error:", "interface_w_f_display_configuration.html#a94cc7dc64052e2cfd90b193a3f283027", null ],
+    [ "_buttons", "interface_w_f_display_configuration.html#ae351b47e9cbb6f278525a236b452e2d8", null ],
+    [ "_comment", "interface_w_f_display_configuration.html#acbbe177e2ab7873d29309ce42aabf156", null ],
+    [ "_configurationID", "interface_w_f_display_configuration.html#ac1eb3e6e9187a3e06eb54e03dea776e7", null ],
+    [ "_errors", "interface_w_f_display_configuration.html#a3b32d4421f651454ef1e93e8e202d49f", null ],
+    [ "_mutablePages", "interface_w_f_display_configuration.html#ae24adbb98a7c07cd513c112dfcf8aed6", null ],
+    [ "_pages", "interface_w_f_display_configuration.html#a3cc16b6ec0749560de62fbd9013fcb50", null ],
+    [ "_sounds", "interface_w_f_display_configuration.html#aa38835f737b333d33bbe7dd5ba4508b9", null ],
+    [ "_strings", "interface_w_f_display_configuration.html#a550fd43e78223fd61c64c7dcced5981c", null ],
+    [ "buttons", "interface_w_f_display_configuration.html#a7feebd4aa233c119f69aaa8ddaaac6fe", null ],
+    [ "comment", "interface_w_f_display_configuration.html#a7933ad6d0be5e66d27987d8648d3ee43", null ],
+    [ "configurationID", "interface_w_f_display_configuration.html#aedd86cdfd5609a9ad20aeaa6b5c17191", null ],
+    [ "pages", "interface_w_f_display_configuration.html#aa0bed9becb56dbd928aecd1f4de90910", null ],
+    [ "sounds", "interface_w_f_display_configuration.html#a4888a8de9714c3a101017a303ed73550", null ],
+    [ "strings", "interface_w_f_display_configuration.html#a3a8a199d234a912279b9e7251b3c3543", null ]
+];

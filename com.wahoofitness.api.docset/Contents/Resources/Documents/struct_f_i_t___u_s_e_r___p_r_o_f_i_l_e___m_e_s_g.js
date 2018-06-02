@@ -1,0 +1,25 @@
+var struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g =
+[
+    [ "activity_class", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#a0b71881ce33329556d126518eba41b4a", null ],
+    [ "age", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#ac8db3f1d134f71230b68e7665ebaf94d", null ],
+    [ "default_max_biking_heart_rate", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#a847fbc5b67cbd8ecb9b1c1bb3fcf2185", null ],
+    [ "default_max_heart_rate", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#ac651cdb6c1b62439823a45d5ec845227", null ],
+    [ "default_max_running_heart_rate", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#a30f30284f94203147a9fecf7f4ea382c", null ],
+    [ "dist_setting", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#ab259534bc3b4b0ed17b02671a95e0776", null ],
+    [ "elev_setting", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#a4f9dc102572febd53416ba731ee87143", null ],
+    [ "friendly_name", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#af71dbfac4c045ff202809cc8e3b6361f", null ],
+    [ "gender", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#a65d70702ac7bef080775d078c5959e1d", null ],
+    [ "global_id", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#a3cd6a450f7560775c8d7b5c78609a111", null ],
+    [ "height", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#aacfa0e62392a67fef75d684b1d5abda1", null ],
+    [ "hr_setting", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#a60f43658e9da2b1c428f98f8e89a04e1", null ],
+    [ "language", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#a7acd34f1f1ee31d7c9a4ef75987223a8", null ],
+    [ "local_id", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#a3f4f7fb4a56aa8d65846b81b74b6d492", null ],
+    [ "message_index", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#a61a9ae275a432e6c5177837f31b5ea5e", null ],
+    [ "position_setting", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#a1bc0652fc0c8359967cd2d971847e017", null ],
+    [ "power_setting", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#ae9cf94ddbbeadfa5021b6445ad38ce32", null ],
+    [ "resting_heart_rate", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#a221a7d0c9aa8eea47b4edea7d9751d27", null ],
+    [ "speed_setting", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#acc6114c2c74385bc6fdacfa26b8af9fd", null ],
+    [ "temperature_setting", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#a3466432629af695783a7983e8282f89f", null ],
+    [ "weight", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#a42af6d2bf5ec878e53a37dd3ef80b6d9", null ],
+    [ "weight_setting", "struct_f_i_t___u_s_e_r___p_r_o_f_i_l_e___m_e_s_g.html#aef8705c06e443fdfe35ef8385d929727", null ]
+];

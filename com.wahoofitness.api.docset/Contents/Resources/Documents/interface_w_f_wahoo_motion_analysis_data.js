@@ -1,0 +1,27 @@
+var interface_w_f_wahoo_motion_analysis_data =
+[
+    [ "formattedCadence", "interface_w_f_wahoo_motion_analysis_data.html#a9bdbb10bae59964b413bf9372354deeb", null ],
+    [ "timeSinceMotion", "interface_w_f_wahoo_motion_analysis_data.html#a000f7e1741f6da5e9f83915ff05dd6de", null ],
+    [ "activityType", "interface_w_f_wahoo_motion_analysis_data.html#a0685c72e06061316554c776fc5297be2", null ],
+    [ "cadenceRPM", "interface_w_f_wahoo_motion_analysis_data.html#acb4a2bce6b07861e1cf02a2d7686dd3e", null ],
+    [ "ellipticalInstantaneousSpeed", "interface_w_f_wahoo_motion_analysis_data.html#a6a7e4dc6c7b6cb87c843af4cb11c4654", null ],
+    [ "indoorCyclingCumulativeSittingTime", "interface_w_f_wahoo_motion_analysis_data.html#add95888bc1ed7b4696c57c617ab68026", null ],
+    [ "indoorCyclingCumulativeStandingTime", "interface_w_f_wahoo_motion_analysis_data.html#a8dccb27386f58c68c33fb7a91c3eaac0", null ],
+    [ "indoorCyclingRiderPosition", "interface_w_f_wahoo_motion_analysis_data.html#a125831f4d89fdef26b9cfd0d4226f35a", null ],
+    [ "indoorCyclingTrunkAngleDegrees", "interface_w_f_wahoo_motion_analysis_data.html#a55ba9bdf3794a6d7977280696bb2b3e8", null ],
+    [ "isDataStale", "interface_w_f_wahoo_motion_analysis_data.html#a701b5da03704a40ba7842ad9ec5bf982", null ],
+    [ "motionCount", "interface_w_f_wahoo_motion_analysis_data.html#a8c4d18165aa0d687dcedb1e937f8a8ec", null ],
+    [ "motionTimestamp", "interface_w_f_wahoo_motion_analysis_data.html#a90360a845367e5aa444bcf1097aebbd8", null ],
+    [ "runningGroundContactTimeSeconds", "interface_w_f_wahoo_motion_analysis_data.html#a91d394bc1aa8334508dfe57dd1e295fe", null ],
+    [ "runningIsRunningStatus", "interface_w_f_wahoo_motion_analysis_data.html#af776d0cd0af130a706794e586cdb4143", null ],
+    [ "runningSmoothnessData", "interface_w_f_wahoo_motion_analysis_data.html#a7af3e595b7ce1d5b6e5a324ee0c195e6", null ],
+    [ "runningSquaredJerkX", "interface_w_f_wahoo_motion_analysis_data.html#a6127597d6149f0bff8ec63b4b5a7d495", null ],
+    [ "runningSquaredJerkY", "interface_w_f_wahoo_motion_analysis_data.html#a02fd141ca9dbddd155c2f7329f7661a9", null ],
+    [ "runningSquaredJerkZ", "interface_w_f_wahoo_motion_analysis_data.html#a3e475e49d055b2af5b8235eea8bd4a74", null ],
+    [ "runningVerticalOscillationMetres", "interface_w_f_wahoo_motion_analysis_data.html#ae75ad81c5fc8e21b17b2311bc7a91d34", null ],
+    [ "settings", "interface_w_f_wahoo_motion_analysis_data.html#a0873e158401ffeae4fa47d6601f15eca", null ],
+    [ "xCountingCumulativeCorrectPositionHeldTime", "interface_w_f_wahoo_motion_analysis_data.html#ac8a21114f6fb58f7f3871d9b9c4b984c", null ],
+    [ "xCountingCumulativeIncorrectPositionHeldTime", "interface_w_f_wahoo_motion_analysis_data.html#a14bfae5750ec34407674240ee44e4df3", null ],
+    [ "xCountingCumulativeMovingTime", "interface_w_f_wahoo_motion_analysis_data.html#a807b687d3af6dcada61e78c19a570a68", null ],
+    [ "xCountingCurrentDeviceOrientation", "interface_w_f_wahoo_motion_analysis_data.html#a148415474b9a9ff51473e6f5dab415ff", null ]
+];

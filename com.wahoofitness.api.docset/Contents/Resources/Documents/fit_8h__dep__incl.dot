@@ -1,0 +1,14 @@
+digraph "fit.h"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="fit.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="fit_sdk.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fit__sdk_8h.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="fit_product.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fit__product_8h.html"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="fit_convert.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fit__convert_8h.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="fit_crc.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fit__crc_8h.html"];
+}

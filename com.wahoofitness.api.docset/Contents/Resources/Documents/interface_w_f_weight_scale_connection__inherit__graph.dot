@@ -1,0 +1,16 @@
+digraph "WFWeightScaleConnection"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="WFWeightScaleConnection",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="_WFWeightScaleConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface___w_f_weight_scale_connection.html",tooltip="Internal-use base class for the WFWeightScaleConnection. "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="WFSensorConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_w_f_sensor_connection.html",tooltip="Represents the connection for an ANT sensor. "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="_WFSensorConnection",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="\<WFWeightScaleDelegate\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$protocol_w_f_weight_scale_delegate-p.html",tooltip="Provides the interface for callback methods used by the WFWeightScaleConnection. "];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="\<_WFWeightScaleDelegate\>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}
