@@ -88,8 +88,8 @@ static bool addSubviews = true;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     self.navigationItem.title = @"Bike Speed & Cadence";
+    
     [self initStoryPlayer];
     [self initChallengePlayer];
 }
@@ -229,7 +229,7 @@ static bool addSubviews = true;
         }
         if ([computedCadenceLabel.text isEqualToString:@"--"] &&!inChallenge){
             timeNotActive++;
-            //NSLog([NSString stringWithFormat:@"%lu",(unsigned long)timeNotActive]);
+            NSLog([NSString stringWithFormat:@"%lu",(unsigned long)timeNotActive]);
             //NSLog(computedCadenceLabel.text);
         }
         //if started and got off reset to startcreen
@@ -245,7 +245,7 @@ static bool addSubviews = true;
         else if (![computedCadenceLabel.text isEqualToString:@"--"] && !isPlaying &&!inChallenge){
             timeNotActive = 0;
             [self.view bringSubviewToFront:_storyPlayerController.view];
-            
+            //NSLog(@"%d",timeNotActive);
             isPlaying = true;
            
             [_storyPlayer play];
@@ -258,17 +258,30 @@ static bool addSubviews = true;
             //NSLog([NSString stringWithFormat:@"%f", time]);
         }
         //if someone completed the video
-        if ((storyTime>CMTimeGetSeconds(_storyPlayer.currentItem.asset.duration)-1.0 ||storyTime>CMTimeGetSeconds(_storyPlayer.currentItem.asset.duration)+1.0) && !inChallenge){
+        if ((storyTime>CMTimeGetSeconds(_storyPlayer.currentItem.asset.duration)-1.0 ||storyTime>CMTimeGetSeconds(_storyPlayer.currentItem.asset.duration)+1.0) && !inChallenge && isPlaying){
             isPlaying = false;
             inChallenge = true;
             _noButton.hidden = false;
             _yesButton.hidden = false;
             [_storyPlayer pause];
             [_storyPlayer seekToTime:kCMTimeZero];
+            challengeQ.hidden = false;
+            CGPoint noCenter = self.view.center;
+            CGPoint yesCenter = self.view.center;
+            noCenter.x += 100;
+            noCenter.y -= 50;
+            yesCenter.x -= 150;
+            yesCenter.y -= 50;
+            CGRect buttonFrame = _noButton.frame;
+            buttonFrame.size = CGSizeMake(200, 240);
+            _yesButton.frame = buttonFrame;
+            _noButton.frame = buttonFrame;
+            _yesButton.center = yesCenter;
+            _noButton.center = noCenter;
+            [self.view bringSubviewToFront:challengeQ];
             [self.view bringSubviewToFront:_noButton];
             [self.view bringSubviewToFront:_yesButton];
-            challengeQ.hidden = false;
-            [self.view bringSubviewToFront:challengeQ];
+            
         }
         //challenge ends
         else if ((challengeTime>CMTimeGetSeconds(_challengePlayer.currentItem.asset.duration)-1.0 ||challengeTime>CMTimeGetSeconds(_challengePlayer.currentItem.asset.duration)+1.0) && isPlaying && inChallenge){
@@ -279,15 +292,32 @@ static bool addSubviews = true;
             [_challengePlayer pause];
             [_challengePlayer seekToTime:kCMTimeZero];
             CGPoint center = self.view.center;
-            center.y -= 40;
+            center.y -= 60;
             distanceBiked.center = center;
             [self.view bringSubviewToFront:_challengeEnd];
-            [distanceBiked setFont:[UIFont fontWithName:@"HelveticaNeue" size:33]];
-            NSString* revs =[NSString stringWithFormat:@"%lu", bscData.accumCrankRevolutions];
+            //[distanceBiked setFont:[UIFont fontWithName:@"Rubik-Medium" size:48]];
+            UIFont *font = [UIFont fontWithName:@"Rubik-Medium" size:48.0];
+            NSDictionary *attrsDictionary = [NSDictionary dictionaryWithObject:font
+                                                                        forKey:NSFontAttributeName];
+            
+            NSString* revs =[NSString stringWithFormat:@"%.1f", bscData.accumCrankRevolutions*7.33/5280.0];
             NSString *fullText = [NSString stringWithFormat:@"You Biked \n %@ miles!",revs];
-            distanceBiked.text = fullText;
+            NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:fullText attributes:attrsDictionary];
+            distanceBiked.attributedText = attrString;
             distanceBiked.hidden = false;
+            NSString *post = [NSString stringWithFormat:@"Distance=%@",revs];
+            NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+            NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
+            NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+            [request setURL:[NSURL URLWithString:@"http://www.abcde.com/xyz/login.aspx"]];
+            [request setHTTPMethod:@"POST"];
+            [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+            [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+            [request setHTTPBody:postData];
+            NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+
             [self.view bringSubviewToFront:distanceBiked];
+            
             //NSLog(@"%lu", bscData.accumCrankRevolutions);
             sleepNow = true;
         }
@@ -411,7 +441,7 @@ static bool addSubviews = true;
     NSError *error = nil;
     NSArray *dirandfilenames = [fm contentsOfDirectoryAtPath:path error:&error];
     //NSLog(@"%@",dirandfilenames[11]);
-    NSString *path1 = dirandfilenames[11];
+    NSString *path1 = dirandfilenames[14];
     
     NSArray *components = [NSArray arrayWithObjects:path,path1,nil];
     NSString *fullpath = [NSString pathWithComponents:components];
@@ -430,7 +460,7 @@ static bool addSubviews = true;
     NSError *error = nil;
     NSArray *dirandfilenames = [fm contentsOfDirectoryAtPath:path error:&error];
     NSLog(@"%@",dirandfilenames);
-    NSString *path1 = dirandfilenames[15];
+    NSString *path1 = dirandfilenames[26];
     
     NSArray *components = [NSArray arrayWithObjects:path,path1,nil];
     NSString *fullpath = [NSString pathWithComponents:components];
@@ -448,6 +478,7 @@ static bool addSubviews = true;
 }
 
 - (IBAction)yesAction:(id)sender {
+    //AudioServicesPlaySystemSound (1100);
     isPlaying = true;
     [self.bikeSpeedCadenceConnection requestOdometerReset:0.0];
     //controller.showsPlaybackControls = false;
@@ -455,6 +486,8 @@ static bool addSubviews = true;
     [_challengePlayer play];
 }
 - (IBAction)noAction:(id)sender {
+    //AudioServicesPlaySystemSound (1100);
+    
     inChallenge = false;
     startScreen.hidden=false;
     isPlaying = false;

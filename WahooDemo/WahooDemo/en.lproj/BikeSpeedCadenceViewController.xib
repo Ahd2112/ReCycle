@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Helvetica.ttc">
-            <string>Helvetica</string>
-            <string>Helvetica-Bold</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BikeSpeedCadenceViewController">
             <connections>
                 <outlet property="challengeEnd" destination="cdk-xI-8yP" id="cZx-pi-aKh"/>
-                <outlet property="challengeQ" destination="JHk-a2-dHe" id="TU9-5n-nwW"/>
+                <outlet property="challengeQ" destination="dnu-8J-cuf" id="PK5-Vw-VZ1"/>
                 <outlet property="computedCadenceLabel" destination="12" id="30"/>
                 <outlet property="computedSpeedLabel" destination="14" id="31"/>
                 <outlet property="connectButton" destination="76" id="81"/>
@@ -44,15 +38,22 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <userGuides>
-                <userLayoutGuide location="230" affinity="minY"/>
+                <userLayoutGuide location="229" affinity="minY"/>
                 <userLayoutGuide location="158" affinity="minX"/>
             </userGuides>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="JbY-rZ-DEh">
-                    <rect key="frame" x="60" y="77" width="216" height="100"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="JbY-rZ-DEh">
+                    <rect key="frame" x="34" y="77" width="242" height="135"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="33"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <attributedString key="attributedText">
+                        <fragment content="puppyHello">
+                            <attributes>
+                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="33" name="Rubik-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="n/a" lineBreakMode="tailTruncation" minimumFontSize="10" id="6">
@@ -286,12 +287,12 @@
                         <action selector="odometerClicked:" destination="-1" eventType="touchUpInside" id="105"/>
                     </connections>
                 </button>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Pedal_to_Start.png" id="iX8-79-btT">
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Pedal to Start.png" id="iX8-79-btT">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Orc-Hx-uZ4">
-                    <rect key="frame" x="120" y="111" width="70" height="42"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Orc-Hx-uZ4">
+                    <rect key="frame" x="94" y="164" width="84" height="79"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal">
                         <color key="titleShadowColor" red="1" green="0.24969744490000001" blue="0.1533946149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -300,9 +301,12 @@
                         <action selector="yesAction:" destination="-1" eventType="touchUpInside" id="laJ-Rm-Spu"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KFK-4W-2P0">
-                    <rect key="frame" x="231" y="111" width="86" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KFK-4W-2P0">
+                    <rect key="frame" x="160" y="158" width="73" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
                     <connections>
                         <action selector="noAction:" destination="-1" eventType="touchUpInside" id="agF-JZ-BWO"/>
                     </connections>
@@ -311,8 +315,8 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ChallengeQ.png" id="JHk-a2-dHe">
-                    <rect key="frame" x="0.0" y="-5" width="320" height="416"/>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ChallengeQ.png" id="dnu-8J-cuf">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
@@ -323,7 +327,7 @@
     </objects>
     <resources>
         <image name="ChallengeQ.png" width="2732" height="2052"/>
-        <image name="Pedal_to_Start.png" width="2732" height="2052"/>
+        <image name="Pedal to Start.png" width="2732" height="2052"/>
         <image name="challenge_end.png" width="2732" height="2052"/>
     </resources>
 </document>
