@@ -61,6 +61,8 @@ static bool addSubviews = true;
     [distanceBiked release];
     [distanceBiked release];
     [_challengeEnd release];
+    [_sendMessage release];
+    [_sendMessage release];
     [super dealloc];
 }
 
@@ -199,16 +201,22 @@ static bool addSubviews = true;
         if(addSubviews){
             _challengePlayerController.view.frame = self.view.bounds;
             [[self view] addSubview:_challengePlayerController.view];
+        
             _storyPlayerController.view.frame = self.view.bounds;
+
              [[self view] addSubview:_storyPlayerController.view];
-            addSubviews= false;
+            [startScreen setFrame:self.view.bounds];
+            [challengeQ setFrame:self.view.bounds];
+            [_challengeEnd setFrame:self.view.bounds];
+            startScreen.hidden = false;
             [self.view bringSubviewToFront:startScreen];
+            addSubviews= false;
+          //  CGRect test = startScreen.frame;
+           // CGRect othert = challengeQ.frame;
+           // int x = 7;
         }
         [[self navigationController]setNavigationBarHidden:true];
-        startScreen.hidden = false;
-        [startScreen setFrame:self.view.bounds];
-        [challengeQ setFrame:self.view.bounds];
-        [_challengeEnd setFrame:self.view.bounds];
+        //startScreen.hidden = false;
         // update basic data.
 		lastCadenceTimeLabel.text = [NSString stringWithFormat:@"%3.3f", bscData.accumCadenceTime];
 		totalCadenceRevolutionsLabel.text = [NSString stringWithFormat:@"%ld", bscData.accumCrankRevolutions];
@@ -220,11 +228,13 @@ static bool addSubviews = true;
         distanceLabel.text = [bscData formattedDistance:TRUE];
         //the movie is currently not running
         if(sleepNow){
-            [self.view bringSubviewToFront:startScreen];
-            [NSThread sleepForTimeInterval:10.0];
-            _challengeEnd.hidden = true;
+             _challengeEnd.hidden = true;
             startScreen.hidden = false;
-            
+            [self.view bringSubviewToFront:_storyPlayerController.view];
+            [self.view addSubview:startScreen];
+            [NSThread sleepForTimeInterval:5.0f];
+           
+           // [self.view bringSubviewToFront:startScreen];
             sleepNow = false;
         }
         if ([computedCadenceLabel.text isEqualToString:@"--"] &&!inChallenge){
@@ -236,9 +246,12 @@ static bool addSubviews = true;
         if([computedCadenceLabel.text isEqualToString:@"--"] && timeNotActive>10 && !inChallenge){
             isPlaying = false;
             startScreen.hidden = false;
-            [self.view bringSubviewToFront:startScreen];
+            //CGRect test = startScreen.frame;
+            //CGRect othert = self.view.frame;
+            //_storyPlayerController.view.hidden = true;
             [_storyPlayer seekToTime:kCMTimeZero];
             [_storyPlayer pause];
+            [self.view bringSubviewToFront:startScreen];
             //go back to restart screen
         }
         //if not running play movie and bike not moving play movie
@@ -247,7 +260,7 @@ static bool addSubviews = true;
             [self.view bringSubviewToFront:_storyPlayerController.view];
             //NSLog(@"%d",timeNotActive);
             isPlaying = true;
-           
+            //_storyPlayerController.view.hidden = false;
             [_storyPlayer play];
         }
         float storyTime;
@@ -300,24 +313,38 @@ static bool addSubviews = true;
             NSDictionary *attrsDictionary = [NSDictionary dictionaryWithObject:font
                                                                         forKey:NSFontAttributeName];
             
-            NSString* revs =[NSString stringWithFormat:@"%.1f", bscData.accumCrankRevolutions*7.33/5280.0];
-            NSString *fullText = [NSString stringWithFormat:@"You Biked \n %@ miles!",revs];
+            NSString* distance =[NSString stringWithFormat:@"%.1f", bscData.accumCrankRevolutions*7.33/5280.0];
+            NSString *fullText = [NSString stringWithFormat:@"You Biked \n %@ miles!",distance];
             NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:fullText attributes:attrsDictionary];
             distanceBiked.attributedText = attrString;
             distanceBiked.hidden = false;
-            NSString *post = [NSString stringWithFormat:@"Distance=%@",revs];
-            NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-            NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
-            NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-            [request setURL:[NSURL URLWithString:@"http://www.abcde.com/xyz/login.aspx"]];
-            [request setHTTPMethod:@"POST"];
-            [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-            [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-            [request setHTTPBody:postData];
-            NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-
             [self.view bringSubviewToFront:distanceBiked];
             
+            //php code
+            NSString *revs = [NSString stringWithFormat:@"Distance=%@",distance];
+            NSString *url =@"http://students.washington.edu/bharatis/leaderboard.php";
+
+            NSData *postData = [revs dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+            NSString *postLength = [NSString stringWithFormat:@"%lu",(unsigned long)[postData length]];
+            NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+            
+            [req setHTTPMethod:@"POST"];
+            [req setValue:postLength forHTTPHeaderField:@"Content-Length"];
+            [req setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+            [req setHTTPBody:postData];
+            NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+            NSURLSessionDataTask *task = [session dataTaskWithRequest:req
+                                                    completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                        // Do something with response data here - convert to JSON, check if error exists, etc....
+                                                        //NSLog(error.localizedDescription);
+                                                        //NSLog(response.description);
+                                                        
+                                                       // NSLog([[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+                                                        
+                                                       // NSLog(@"response status code: %ld", (long)[response statusCode]);
+                                                    }];
+            
+            [task resume];
             //NSLog(@"%lu", bscData.accumCrankRevolutions);
             sleepNow = true;
         }
@@ -441,7 +468,7 @@ static bool addSubviews = true;
     NSError *error = nil;
     NSArray *dirandfilenames = [fm contentsOfDirectoryAtPath:path error:&error];
     //NSLog(@"%@",dirandfilenames[11]);
-    NSString *path1 = dirandfilenames[14];
+    NSString *path1 = @"Eco-Cycle.mp4";
     
     NSArray *components = [NSArray arrayWithObjects:path,path1,nil];
     NSString *fullpath = [NSString pathWithComponents:components];
@@ -450,17 +477,18 @@ static bool addSubviews = true;
     AVPlayer *player = [AVPlayer playerWithURL:url];
     AVPlayerViewController * controller = [[AVPlayerViewController alloc]init];
     controller.player = player;
-    //controller.view.frame = self.view.bounds;
+    controller.showsPlaybackControls = false;
     _storyPlayer = player;
     _storyPlayerController = controller;
 }
+
 - (void) initChallengePlayer{
     NSString *path = [[NSBundle mainBundle] resourcePath];
     NSFileManager *fm = [NSFileManager defaultManager];
     NSError *error = nil;
     NSArray *dirandfilenames = [fm contentsOfDirectoryAtPath:path error:&error];
     NSLog(@"%@",dirandfilenames);
-    NSString *path1 = dirandfilenames[26];
+    NSString *path1 = @"challenge.mp4";
     
     NSArray *components = [NSArray arrayWithObjects:path,path1,nil];
     NSString *fullpath = [NSString pathWithComponents:components];
@@ -469,9 +497,7 @@ static bool addSubviews = true;
     AVPlayerViewController * controller = [[AVPlayerViewController alloc]init];
     
     controller.player = player;
-    //controller.view.frame = self.view.bounds;
-    //TODO possible memory leak
-    //controller.showsPlaybackControls = false;
+    controller.showsPlaybackControls = false;
 
     _challengePlayer = player;
     _challengePlayerController = controller;
@@ -480,8 +506,8 @@ static bool addSubviews = true;
 - (IBAction)yesAction:(id)sender {
     //AudioServicesPlaySystemSound (1100);
     isPlaying = true;
+    //_challengePlayerController.view.hidden = false;
     [self.bikeSpeedCadenceConnection requestOdometerReset:0.0];
-    //controller.showsPlaybackControls = false;
     [self.view bringSubviewToFront:_challengePlayerController.view];
     [_challengePlayer play];
 }
@@ -489,12 +515,49 @@ static bool addSubviews = true;
     //AudioServicesPlaySystemSound (1100);
     
     inChallenge = false;
+    challengeQ.hidden = true;
     startScreen.hidden=false;
     isPlaying = false;
+    //_storyPlayerController.view.hidden = true;
     [self.view bringSubviewToFront:startScreen];
     sleepNow = true;
 }
+- (IBAction)sendMessage:(id)sender {
+    float gone =arc4random() / ((pow(2, 32)-1)) * 2.0;
+    NSString *distance = [NSString stringWithFormat:@"%.1f", gone];
+    NSString *revs = [NSString stringWithFormat:@"Distance=%@",distance];
+    NSString *url =@"http://students.washington.edu/bharatis/leaderboard.php";
+    NSString *url2 =@"http://httpbin.org/post";
+    NSString *url3 = @"http://httpbin.org/get";
+    //php code
+    NSData *postData = [revs dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%lu",(unsigned long)[postData length]];
+    NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+    
+    [req setHTTPMethod:@"POST"];
+    [req setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [req setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [req setHTTPBody:postData];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:req
+                                            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                // Do something with response data here - convert to JSON, check if error exists, etc....
+                                                //NSLog(error.localizedDescription);
+                                                //NSLog(response.description);
+                                                NSString* msg = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                                                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"BTLE CSC" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                [alert show];
+                                                [alert release];
+                                                alert = nil;
+                                                NSLog([[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+                                                
+                                                //NSLog(@"response status code: %ld", (long)[response statusCode]);
+                                            }];
+    
+    [task resume];
 
+    //end php
+}
 
 
 @end

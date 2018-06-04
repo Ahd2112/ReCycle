@@ -36,6 +36,8 @@
     UILabel* temperatureLabel;
     UILabel* distanceBiked;
     
+    UIWebView *myWebView;
+    
 }
 
 
@@ -55,6 +57,7 @@
 @property (retain, nonatomic) IBOutlet UIImageView *challengeEnd;
 @property (retain, nonatomic) IBOutlet UIButton *yesButton;
 @property (retain, nonatomic) IBOutlet UIButton *noButton;
+@property (retain, nonatomic) IBOutlet UIButton *sendMessage;
 
 @property (retain,atomic) AVPlayer* storyPlayer;
 @property (retain,atomic) AVPlayer* challengePlayer;

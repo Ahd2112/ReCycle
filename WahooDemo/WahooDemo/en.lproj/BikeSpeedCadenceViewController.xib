@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica</string>
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BikeSpeedCadenceViewController">
             <connections>
@@ -23,6 +29,7 @@
                 <outlet property="lastSpeedTimeLabel" destination="24" id="35"/>
                 <outlet property="noButton" destination="KFK-4W-2P0" id="RQh-ZQ-lyT"/>
                 <outlet property="proximitySwitch" destination="91" id="93"/>
+                <outlet property="sendMessage" destination="0Fx-jl-zF8" id="pVZ-Y0-0OP"/>
                 <outlet property="signalEfficiencyLabel" destination="69" id="71"/>
                 <outlet property="startScreen" destination="iX8-79-btT" id="zUL-z2-pUJ"/>
                 <outlet property="temperatureLabel" destination="99" id="101"/>
@@ -49,7 +56,7 @@
                         <fragment content="puppyHello">
                             <attributes>
                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="33" name="Rubik-Medium"/>
+                                <font key="NSFont" metaFont="system" size="33"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
@@ -315,10 +322,18 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ChallengeQ.png" id="dnu-8J-cuf">
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="challengeQ.png" id="dnu-8J-cuf">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Fx-jl-zF8">
+                    <rect key="frame" x="203" y="274" width="81" height="92"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="SendNumber"/>
+                    <connections>
+                        <action selector="sendMessage:" destination="-1" eventType="touchUpInside" id="xz1-Qw-HMf"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.75558769702911377" green="0.75558769702911377" blue="0.75558769702911377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -326,8 +341,8 @@
         </view>
     </objects>
     <resources>
-        <image name="ChallengeQ.png" width="2732" height="2052"/>
         <image name="Pedal to Start.png" width="2732" height="2052"/>
+        <image name="challengeQ.png" width="2732" height="2052"/>
         <image name="challenge_end.png" width="2732" height="2052"/>
     </resources>
 </document>

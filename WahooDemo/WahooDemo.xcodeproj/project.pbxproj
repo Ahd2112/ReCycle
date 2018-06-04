@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F3DEB0720C48471001608FB /* challengeQ@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F3DEB0620C4846F001608FB /* challengeQ@2x.png */; };
+		7F3DEB0920C48603001608FB /* Eco-Cycle.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7F3DEB0820C48603001608FB /* Eco-Cycle.mp4 */; };
 		7F42740420AD29D00063B85F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F42740320AD29D00063B85F /* CoreMedia.framework */; };
 		7F546CF620B269C100881060 /* challenge.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7F546CF520B269C000881060 /* challenge.mp4 */; };
 		7F546CF820B26A3300881060 /* challenge_end.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F546CF720B26A3300881060 /* challenge_end.png */; };
 		7F84D0E620AA9B97001BE8F4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F84D0E520AA9B97001BE8F4 /* AVFoundation.framework */; };
 		7F84D0E820AA9B9D001BE8F4 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F84D0E720AA9B9D001BE8F4 /* AVKit.framework */; };
-		7FBAAA8620BB16F100B47438 /* Eco-Cycle.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7FBAAA8520BB16F100B47438 /* Eco-Cycle.mp4 */; };
 		AB06267314EF4D6C002A192C /* BTBloodPressureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB06267114EF4D6C002A192C /* BTBloodPressureVC.m */; };
 		AB06267414EF4D6C002A192C /* BTBloodPressureVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB06267214EF4D6C002A192C /* BTBloodPressureVC.xib */; };
 		AB0A04CB140FF08100A8A19B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0A04CA140FF08100A8A19B /* UIKit.framework */; };
@@ -101,8 +102,6 @@
 		ABF269D6141060740013B3B1 /* FootpodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF269D2141060730013B3B1 /* FootpodViewController.xib */; };
 		ABF269EC141067390013B3B1 /* WeightScaleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF269E8141067380013B3B1 /* WeightScaleViewController.xib */; };
 		CFD9F00520C337A500C41C88 /* challenge.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFD9F00420C337A500C41C88 /* challenge.mp4 */; };
-		CFD9F00720C33CD200C41C88 /* Eco-Cycle.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFD9F00620C33CD200C41C88 /* Eco-Cycle.mp4 */; };
-		CFD9F00920C349D800C41C88 /* ChallengeQ@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD9F00820C349D700C41C88 /* ChallengeQ@2x.png */; };
 		CFD9F00B20C35AC400C41C88 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFD9F00A20C35AC300C41C88 /* Rubik-Medium.ttf */; };
 		CFD9F00D20C35C9C00C41C88 /* Pedal to Start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD9F00C20C35C9C00C41C88 /* Pedal to Start@2x.png */; };
 		EC01EF111B7D6C8100016380 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC01EF101B7D6C8100016380 /* SystemConfiguration.framework */; };
@@ -111,12 +110,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F3DEB0620C4846F001608FB /* challengeQ@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "challengeQ@2x.png"; path = "../../../challengeQ@2x.png"; sourceTree = "<group>"; };
+		7F3DEB0820C48603001608FB /* Eco-Cycle.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Eco-Cycle.mp4"; sourceTree = "<group>"; };
 		7F42740320AD29D00063B85F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		7F546CF520B269C000881060 /* challenge.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = challenge.mp4; sourceTree = "<group>"; };
 		7F546CF720B26A3300881060 /* challenge_end.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = challenge_end.png; sourceTree = "<group>"; };
 		7F84D0E520AA9B97001BE8F4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7F84D0E720AA9B9D001BE8F4 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		7FBAAA8520BB16F100B47438 /* Eco-Cycle.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Eco-Cycle.mp4"; sourceTree = "<group>"; };
 		AB06267014EF4D6C002A192C /* BTBloodPressureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTBloodPressureVC.h; sourceTree = "<group>"; };
 		AB06267114EF4D6C002A192C /* BTBloodPressureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTBloodPressureVC.m; sourceTree = "<group>"; };
 		AB06267214EF4D6C002A192C /* BTBloodPressureVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BTBloodPressureVC.xib; path = ../en.lproj/BTBloodPressureVC.xib; sourceTree = "<group>"; };
@@ -242,8 +242,6 @@
 		ABF269D3141060730013B3B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FootpodViewController.xib; sourceTree = "<group>"; };
 		ABF269E9141067380013B3B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WeightScaleViewController.xib; sourceTree = "<group>"; };
 		CFD9F00420C337A500C41C88 /* challenge.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = challenge.mp4; sourceTree = "<group>"; };
-		CFD9F00620C33CD200C41C88 /* Eco-Cycle.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Eco-Cycle.mp4"; sourceTree = "<group>"; };
-		CFD9F00820C349D700C41C88 /* ChallengeQ@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ChallengeQ@2x.png"; path = "../../../../Documents/DESIGN/2nd Year Design/CSE 441/2x/ChallengeQ@2x.png"; sourceTree = "<group>"; };
 		CFD9F00A20C35AC300C41C88 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		CFD9F00C20C35C9C00C41C88 /* Pedal to Start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pedal to Start@2x.png"; sourceTree = "<group>"; };
 		EC01EF101B7D6C8100016380 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -338,9 +336,8 @@
 				ABF2699D141036D50013B3B1 /* SensorManagerViewController.h */,
 				CFD9F00C20C35C9C00C41C88 /* Pedal to Start@2x.png */,
 				ABF2699E141036D50013B3B1 /* SensorManagerViewController.m */,
-				CFD9F00820C349D700C41C88 /* ChallengeQ@2x.png */,
-				7FBAAA8520BB16F100B47438 /* Eco-Cycle.mp4 */,
-				CFD9F00620C33CD200C41C88 /* Eco-Cycle.mp4 */,
+				7F3DEB0620C4846F001608FB /* challengeQ@2x.png */,
+				7F3DEB0820C48603001608FB /* Eco-Cycle.mp4 */,
 				ABF2699B141036D50013B3B1 /* SensorManagerViewController.xib */,
 				ABE6A5BB1509E0D300A71559 /* DeviceDiscoveryVC.h */,
 				ABE6A5BC1509E0D300A71559 /* DeviceDiscoveryVC.m */,
@@ -528,7 +525,7 @@
 				LastUpgradeCheck = 0920;
 				TargetAttributes = {
 					AB0A04C5140FF08100A8A19B = {
-						DevelopmentTeam = L27LSYA4A2;
+						DevelopmentTeam = R9G4L7NLF4;
 					};
 				};
 			};
@@ -563,9 +560,11 @@
 				AB0A04F7140FF5BE00A8A19B /* Default@2x.png in Resources */,
 				AB0A04F8140FF5BE00A8A19B /* icon.png in Resources */,
 				AB0A04F9140FF5BE00A8A19B /* icon@2x.png in Resources */,
+				7F3DEB0920C48603001608FB /* Eco-Cycle.mp4 in Resources */,
 				ABF26997141035930013B3B1 /* HeartrateViewController.xib in Resources */,
 				ABF2699F141036D50013B3B1 /* SensorManagerViewController.xib in Resources */,
 				ABF269B914104FCA0013B3B1 /* BikeSpeedCadenceViewController.xib in Resources */,
+				7F3DEB0720C48471001608FB /* challengeQ@2x.png in Resources */,
 				ABF269BF141059FD0013B3B1 /* BikeSpeedViewController.xib in Resources */,
 				ABF269C514105CB90013B3B1 /* BikeCadenceViewController.xib in Resources */,
 				ABF269D014105E130013B3B1 /* BikePowerCalibration.xib in Resources */,
@@ -578,13 +577,11 @@
 				AB9CD019146DAB00002EEAA3 /* SettingsViewController.xib in Resources */,
 				AB6580FA14EAEC6300FCF158 /* ProximityViewController.xib in Resources */,
 				AB6580FB14EAEC6300FCF158 /* TemperatureViewController.xib in Resources */,
-				CFD9F00720C33CD200C41C88 /* Eco-Cycle.mp4 in Resources */,
 				AB65810414EAEE4600FCF158 /* sensor-data.plist in Resources */,
 				AB65811514EAFF5500FCF158 /* BTOverviewVC.xib in Resources */,
 				ABA2069614EB045D0072B89C /* BloodPressureViewController.xib in Resources */,
 				ABA2069814EB045D0072B89C /* BPHistoryViewController.xib in Resources */,
 				ABA2069B14EB045D0072B89C /* WeightHistoryViewController.xib in Resources */,
-				7FBAAA8620BB16F100B47438 /* Eco-Cycle.mp4 in Resources */,
 				ABA206A214EB051C0072B89C /* ANTFSSelectVC.xib in Resources */,
 				ABA206AA14EB0B7E0072B89C /* blackBox.png in Resources */,
 				ABA206AB14EB0B7E0072B89C /* greenButton.png in Resources */,
@@ -604,7 +601,6 @@
 				AB21150814FD811800B48141 /* ANTDeviceInfoVC.xib in Resources */,
 				AB575E10150ED99B00861909 /* DeviceDiscoveryVC.xib in Resources */,
 				ABC0402E15252CAD004E66B8 /* OdometerHistoryVC.xib in Resources */,
-				CFD9F00920C349D800C41C88 /* ChallengeQ@2x.png in Resources */,
 				AB22E69C1614C26200B766E2 /* Default-568h@2x.png in Resources */,
 				CFD9F00520C337A500C41C88 /* challenge.mp4 in Resources */,
 			);
@@ -913,7 +909,7 @@
 		AB0A04E8140FF08100A8A19B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = L27LSYA4A2;
+				DEVELOPMENT_TEAM = R9G4L7NLF4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../dependencies\"",
@@ -924,7 +920,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "WahooDemo/WahooDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gjfjfh;
+				PRODUCT_BUNDLE_IDENTIFIER = eqtwert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -934,7 +930,7 @@
 		AB0A04E9140FF08100A8A19B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = L27LSYA4A2;
+				DEVELOPMENT_TEAM = R9G4L7NLF4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../dependencies\"",
@@ -945,7 +941,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "WahooDemo/WahooDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gjfjfh;
+				PRODUCT_BUNDLE_IDENTIFIER = eqtwert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
