@@ -1,0 +1,46 @@
+/* rubik-regular - latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rubik'), local('Rubik-Regular'),
+       url('../fonts/rubik-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/rubik-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+	background-image: url("image6-5.jpg");
+	
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	
+	height: 100%;
+	
+	background-position: center;
+	
+    background-repeat: no-repeat;
+	
+	background-size: cover;
+}
+
+.bg {
+	
+}
+
+.position {
+	margin-top: 12%;
+	margin-left: 0%;	
+	
+	font-family: 'Rubik';
+	font-size: 50px;
+	color: white;
+}
+
+ul {
+	padding-top:20%;
+}
+
+li {
+	padding-bottom: 5%;
+}
